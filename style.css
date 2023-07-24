@@ -69,11 +69,6 @@ input::placeholder {
   text-align: center;
 }
 
-i.fa-location-dot {
-  color: #333;
-  font-size: 20px;
-}
-
 .city--name {
   display: flex;
   align-items: center;
@@ -103,6 +98,7 @@ a.search {
 
 .weather--heading > h2 {
   font-size: 50px;
+  color: #333;
 }
 
 i.fa-temperature-high {
