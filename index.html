@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="Assets/Images/cloudy.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>Weather Today</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -16,12 +20,15 @@
         </h1>
       </div>
       <div class="weather--info">
-        <input
-          class="city"
-          type="text"
-          name="city"
-          placeholder="Enter Your City here"
-        />
+        <div class="city--name">
+          <span><i class="fa-solid fa-location-dot"></i></span>
+          <input
+            class="city"
+            type="text"
+            name="city"
+            placeholder="Enter Your City here"
+          />
+        </div>
       </div>
     </div>
     <script src="main.js"></script>

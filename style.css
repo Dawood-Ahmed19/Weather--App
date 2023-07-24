@@ -52,10 +52,29 @@ input.city {
   border: none;
   border-radius: 20px;
   background-color: #333;
-  padding: 10px 20px;
+  padding: 10px 0px;
+  color: white;
+  text-align: center;
+  transition: 500ms all ease;
+}
+
+input.city:focus {
+  outline: none;
+  padding-inline: 15px;
 }
 
 input::placeholder {
   color: white;
   text-align: center;
+}
+
+i.fa-location-dot {
+  color: #333;
+  font-size: 20px;
+}
+
+.city--name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
