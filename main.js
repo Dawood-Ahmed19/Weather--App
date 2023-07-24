@@ -3,8 +3,7 @@ fetchWeather = () => {
   const inputLocation = document.getElementById("city");
   const locationName = inputLocation.value;
   const locationWeather = document.getElementById("location--weather");
-  const Url =
-    "https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric";
+  const Url = `https://api.openweathermap.org/data/2.5/weather?q=${locationName}&appid=${apiKey}&units=metric`;
 
   locationWeather.innerHTML = "";
 
@@ -13,10 +12,20 @@ fetchWeather = () => {
     .then((data) => {
       const weatherDetails = document.createElement("div");
 
-      weatherDetails.innerHTML = `<h2> Weather in ${data.name} </h2>
-      <p> Temperature: ${data.main.temp}°C
-      <p>Description: ${data.weather[0].description}</p>
-      <p>Humidity: ${data.main.humidity}%
-      <p>Wind Speed: ${data.wind.speed} m/s</p>`;
+      weatherDetails.innerHTML = `<h2 class="location--name">${data.name} </h2>
+      <p class="temp"> Temperature: ${data.main.temp}°C
+      <p class="desc">Description: ${data.weather[0].description}</p>
+      <p class="humid">Humidity: ${data.main.humidity}%
+      <p class="windSpd">Wind Speed: ${data.wind.speed} m/s</p>`;
+
+      locationWeather.appendChild(weatherDetails);
+    })
+
+    .catch((error) => {
+      console.error("Error Fetching Weather Data:", error);
+      const errorText = document.createElement("div");
+      errorText.textContent =
+        "Error getting Weather Data... Please Try Again Later";
+      locationWeather.appendChild(errorText);
     });
 };

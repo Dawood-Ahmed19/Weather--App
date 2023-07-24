@@ -83,5 +83,8 @@ i.fa-location-dot {
 i.fa-magnifying-glass {
   color: #333;
   font-size: 15px;
+}
+
+a.search {
   cursor: pointer;
 }
