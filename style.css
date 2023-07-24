@@ -88,3 +88,42 @@ i.fa-magnifying-glass {
 a.search {
   cursor: pointer;
 }
+
+.info--container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.weather--heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.weather--heading > h2 {
+  font-size: 50px;
+}
+
+i.fa-temperature-high {
+  background-image: linear-gradient(
+    to right,
+    #0074d9,
+    #00adef,
+    #fee000,
+    #f97200,
+    #ff4136
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+i.fa-align-left {
+  color: red;
+}
+
+i.fa-water,
+i.fa-wind {
+  color: #555;
+}

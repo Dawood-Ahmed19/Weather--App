@@ -12,11 +12,16 @@ fetchWeather = () => {
     .then((data) => {
       const weatherDetails = document.createElement("div");
 
-      weatherDetails.innerHTML = `<h2 class="location--name">${data.name} </h2>
-      <p class="temp"> Temperature: ${data.main.temp}°C
-      <p class="desc">Description: ${data.weather[0].description}</p>
-      <p class="humid">Humidity: ${data.main.humidity}%
-      <p class="windSpd">Wind Speed: ${data.wind.speed} m/s</p>`;
+      weatherDetails.innerHTML = `
+      <div class="weather--heading">
+      <h2 class="location--name">${data.name}</h2>
+      </div>
+      <div class="info--container">
+      <p class="temp"><i class="fa-solid fa-temperature-high"></i> Temperature:  ${data.main.temp}°C
+      <p class="desc"><i class="fa-solid fa-align-left"></i> Description:  ${data.weather[0].description}</p>
+      <p class="humid"><i class="fa-solid fa-water"></i> Humidity : ${data.main.humidity}%
+      <p class="windSpd"><i class="fa-solid fa-wind"></i> Wind Speed:  ${data.wind.speed} m/s</p>
+      </div>`;
 
       locationWeather.appendChild(weatherDetails);
     })
